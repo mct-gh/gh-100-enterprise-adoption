@@ -1,36 +1,55 @@
-## Step 2: (replace-me: STEP-NAME)
+## 2단계: 내가 풀 문제와 GitHub 이 풀 문제를 가른다
 
-(replace-me: OPTIONAL Brief story or scenario to introduce the step)
+관리자가 하루에 가장 많이 하는 판단입니다. "이건 내가 고치는 건가, 티켓을 열어야 하는 건가."
+잘못 가르면 두 가지가 생깁니다. 고칠 수 있는 것을 며칠 기다리거나, 안 되는 것을 붙잡고 밤을 새웁니다.
 
-### 📖 Theory: (replace-me: Theory title)
-
-<!-- GitHub-styled notifications can be used outside of ordered lists. Available options are: NOTE, IMPORTANT, WARNING, TIP, CAUTION -->
-<!--
 > [!NOTE]
-> (Important note or additional information relevant to this section)
- -->
+> 재사용 워크플로를 만드는 실습은 이 랩에서 뺐습니다. 카탈로그 공식 랩
+> [Create and use reusable workflows](https://github.com/skills/reusable-workflows) 가
+> 권한 전달과 배포, PR 코멘트까지 3단계로 다룹니다. 그쪽이 더 깊습니다.
+> 이 랩은 모듈 7 고유 주제인 지원 경계와 진단에 집중합니다.
 
-(replace-me: Optional theory or background information relevant to this step)
+### 📖 Theory: 경계를 가르는 기준 세 가지
 
-(replace-me: OPTIONAL Reference images from the `.github/images/` directory to support any part of the content)
+1. **설정인가 플랫폼인가.** 조직 설정, 룰셋, 권한, 라이선스 배정은 관리자 몫입니다.
+   서비스 장애, 데이터 손상, 계정 복구, 청구 오류는 GitHub 몫입니다.
+2. **재현되는가.** 내 리포에서만 나는가, 다른 리포와 다른 조직에서도 나는가.
+   후자면 플랫폼 쪽일 가능성이 큽니다. [githubstatus.com](https://www.githubstatus.com) 을 먼저 봅니다.
+3. **배포 형태가 무엇인가.** GHES 는 인스턴스 자체가 우리 것이라 **support bundle** 을 만들어 첨부합니다.
+   GHEC 는 인스턴스가 GitHub 것이라 조직과 리포 설정 상태, 실행 로그, 요청 ID 를 모아 첨부합니다.
 
-<img width="200" alt="descriptive alt text" src="../images/inflatocat.png" />
+> [!TIP]
+> 티켓에 처음부터 붙이면 왕복이 줄어드는 것들입니다.
+> 언제(UTC 시각), 어디서(조직·리포·워크플로 실행 URL), 무엇을 기대했고 무엇이 나왔는지,
+> 재현 절차, 영향 범위(몇 명), 이미 시도한 것.
 
+### ⌨️ Activity: support-boundary.md 를 만든다
 
-### ⌨️ Activity: (replace-me: Activity title)
+`docs/support-boundary.md` 파일을 만들고 아래를 담으세요.
 
-1. (replace-me: First instruction)
+1. 상황 다섯 개를 표로 만들고 각각 `관리자` 가 해결할 것인지 `GitHub Support` 로 보낼 것인지 적습니다.
+   아래 다섯 개를 그대로 쓰면 됩니다.
+   - 조직 멤버가 리포를 못 만든다
+   - Actions 워크플로가 큐에서 30분째 안 잡힌다
+   - SAML 로그인이 되는데 팀 멤버십이 안 붙는다
+   - 삭제한 리포를 되살려야 한다
+   - 청구서의 좌석 수가 실제 인원과 다르다
+2. 그 판단 기준을 두 줄 이상으로 적습니다. 위 이론의 세 기준 중 무엇을 썼는지 드러나게 씁니다.
+3. `티켓` 에 붙일 정보 목록을 다섯 개 이상 적습니다.
+4. GHES 와 GHEC 의 차이를 한 줄 적습니다. `support bundle` 이라는 말을 반드시 넣습니다.
+5. `main` 에 커밋하고 push 합니다.
 
-    (replace-me: Make sure to properly indent any multiline instructions)
+<details><summary>다섯 개 중 헷갈리는 것이 있으면</summary><br/>
 
-1. (replace-me: Second instruction)
+"되살려야 한다" 처럼 이미 사라진 것을 되돌리는 일과, 청구 정정은 관리자 화면에 손잡이가 없습니다.
+반대로 권한과 정책은 거의 다 관리자 화면에 있습니다. 큐 지연은 상태 페이지를 먼저 봐야 갈립니다.
 
-1. (replace-me: Additional instructions as needed)
+</details>
 
-<details>
-<summary>Having trouble? 🤷</summary><br/>
+<details><summary>채점 기준</summary>
 
-- (replace-me: Troubleshooting tip or hint)
-- (replace-me: Additional troubleshooting tips as needed)
-
+- `docs/support-boundary.md` 가 있다
+- 그 안에 `GitHub Support` 가 있다
+- 그 안에 `티켓` 이 있다
+- 그 안에 `support bundle` 이 있다
 </details>

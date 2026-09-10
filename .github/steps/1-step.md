@@ -1,36 +1,30 @@
-## Step 1: (replace-me: STEP-NAME)
+## 1단계: 도입 방식을 정한다
 
-(replace-me: OPTIONAL Brief story or scenario to introduce the step)
+GitHub Enterprise Cloud 를 회사에 들일 때 갈림길이 하나 있습니다.
+**직원들이 각자 만든 개인 계정을 쓰게 할 것인가, 회사가 계정을 발급할 것인가.**
 
-(replace-me: OPTIONAL Reference images from the `.github/images/` directory to support any part of the content)
+- **개인 계정 방식**: 각자 이미 쓰던 GitHub 계정으로 조직에 들어옵니다.
+  오픈소스 활동을 그대로 이어갈 수 있지만, 계정 자체는 회사 것이 아닙니다
+- **EMU(Enterprise Managed User)**: 회사 IdP 가 계정을 만들고 없앱니다.
+  계정이 회사 소유라 통제가 확실하지만, 그 계정으로는 외부 오픈소스에 참여할 수 없습니다
 
-<img width="200" alt="descriptive alt text" src="../images/inspectocat.png" />
+여기에 **GitHub Connect** 가 붙습니다. Enterprise Server 와 Enterprise Cloud 를 이어
+라이선스와 검색과 Dependabot 을 공유하게 만드는 기능입니다.
 
-### 📖 Theory: (replace-me: Theory title)
+### 할 일
 
-<!-- GitHub-styled notifications can be used outside of ordered lists. Available options are: NOTE, IMPORTANT, WARNING, TIP, CAUTION -->
-<!--
-> [!NOTE]
-> (Important note or additional information relevant to this section)
- -->
+`docs/adoption-plan.md` 파일을 만들고 아래를 담으세요.
 
-(replace-me: Optional theory or background information relevant to this step)
-
-
-### ⌨️ Activity: (replace-me: Activity title)
-
-1. (replace-me: First instruction)
-
-    (replace-me: Make sure to properly indent any multiline instructions)
-
-1. (replace-me: Second instruction)
-
-1. (replace-me: Additional instructions as needed)
+1. `Enterprise Managed User` 방식과 개인 계정 방식의 차이를 두 줄 이상 적습니다
+2. `SAML` 과 `SCIM` 이 도입 과정에서 각각 무슨 역할을 하는지 한 줄씩 적습니다
+3. `GitHub Connect` 가 무엇을 잇는지 한 줄 적습니다
+4. 파일럿 범위를 한 줄 적습니다. 몇 명, 어느 팀, 얼마 동안인지
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>어느 쪽을 골라야 하나요</summary><br/>
 
-- (replace-me: Troubleshooting tip or hint)
-- (replace-me: Additional troubleshooting tips as needed)
+정답은 없습니다. 규제 산업이고 감사가 엄격하면 EMU 쪽으로 기웁니다.
+개발자가 오픈소스 활동을 계속해야 하면 개인 계정 방식이 낫습니다.
+시험은 "둘의 차이를 아는가" 를 묻지 "어느 쪽이 옳은가" 를 묻지 않습니다.
 
 </details>

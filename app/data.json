@@ -1,0 +1,11 @@
+{
+  "org": "Contoso Ltd.",
+  "updated": "2026-09-01",
+  "courses": [
+    { "code": "GH-100", "title": "GitHub 관리 기초", "hours": 7, "level": "beginner" },
+    { "code": "GH-200", "title": "GitHub Actions 자동화", "hours": 14, "level": "intermediate" },
+    { "code": "GH-300", "title": "GitHub Copilot 활용", "hours": 7, "level": "intermediate" },
+    { "code": "GH-500", "title": "GitHub Advanced Security", "hours": 14, "level": "advanced" },
+    { "code": "GH-600", "title": "에이전트 AI 시스템 개발", "hours": 7, "level": "intermediate" }
+  ]
+}

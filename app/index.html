@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contoso 교육 포털</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Contoso 교육 포털</h1>
+    <p id="subtitle">사내 교육 과정 목록</p>
+  </header>
+
+  <main>
+    <section id="courses">
+      <h2>개설 과정</h2>
+      <ul id="course-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contoso Ltd.</p>
+  </footer>
+
+  <script>
+    // data.json 을 읽어 과정 목록을 그린다
+    fetch('data.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var list = document.getElementById('course-list');
+        data.courses.forEach(function (c) {
+          var li = document.createElement('li');
+          li.className = 'course';
+          li.innerHTML = '<span class="code">' + c.code + '</span>' +
+                         '<span class="title">' + c.title + '</span>' +
+                         '<span class="hours">' + c.hours + '시간</span>';
+          list.appendChild(li);
+        });
+      })
+      .catch(function (e) {
+        document.getElementById('course-list').textContent = '과정을 불러오지 못했습니다.';
+        console.error(e);
+      });
+  </script>
+</body>
+</html>
